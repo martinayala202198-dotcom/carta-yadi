@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para vos ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Playfair Display',serif;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,215,0,.25), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(255,215,0,.2), transparent 45%),
+    linear-gradient(180deg,#06091a,#140b2d,#220a3a);
+  overflow-x:hidden;
+  perspective:1800px;
+}
+
+/* ✨ BRILLOS */
+.spark{
+  position:fixed;
+  bottom:-40px;
+  animation:rise 16s linear infinite;
+  pointer-events:none;
+  filter:drop-shadow(0 0 6px gold);
+}
+
+@keyframes rise{
+  to{
+    transform:translateY(-140vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* CONTENEDOR */
+#container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:40px;
+  transform-style:preserve-3d;
+}
+
+/* SOBRE */
+#envelope{
+  width:260px;
+  height:160px;
+  background:linear-gradient(145deg,#7b1212,#b22222);
+  border-radius:10px;
+  position:relative;
+  cursor:pointer;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+
+#flap{
+  position:absolute;
+  top:0;
+  border-left:130px solid transparent;
+  border-right:130px solid transparent;
+  border-top:80px solid #c62828;
+  transform-origin:top;
+  transition:transform 1.4s ease;
+}
+
+#openText{
+  position:absolute;
+  bottom:12px;
+  width:100%;
+  text-align:center;
+  color:#ffe7b5;
+  font-style:italic;
+}
+
+/* CARTA */
+#letter{
+  display:none;
+  width:92%;
+  max-width:460px;
+  background:
+    linear-gradient(rgba(255,255,255,.97),rgba(255,255,255,.97)),
+    url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  border-radius:24px;
+  padding:36px;
+  margin:30px 0 80px;
+  box-shadow:
+    inset 0 0 40px rgba(180,140,80,.35),
+    0 50px 90px rgba(0,0,0,.65);
+  border:3px solid #d6b98c;
+  transform:rotateX(-75deg) translateY(200px);
+  opacity:0;
+  transition:all 1.8s cubic-bezier(.19,1,.22,1);
+}
+
+/* 3D */
+.open #flap{
+  transform:rotateX(180deg);
+}
+.open #letter{
+  display:block;
+  transform:rotateX(0deg) translateY(0);
+  opacity:1;
+}
+
+/* TEXTO */
+h2{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  text-align:center;
+  color:#7a1c1c;
+  margin-top:0;
+}
+
+p{
+  font-style:italic;
+  line-height:2;
+  font-size:17px;
+  color:#3e2626;
+  margin:18px 0;
+  text-align:justify;
+}
+
+/* IMÁGENES Y VIDEOS */
+.photo,.video{
+  width:100%;
+  border-radius:20px;
+  margin:26px 0;
+  box-shadow:0 14px 30px rgba(0,0,0,.4);
+  object-fit:cover;
+}
+
+.photo{ height:480px; }
+.video{ height:420px; }
+
+.signature{
+  text-align:right;
+  font-family:'Great Vibes',cursive;
+  font-size:32px;
+  color:#7a1c1c;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="envelope" onclick="openLetter()">
+  <div id="flap"></div>
+  <div id="openText">Abrí el sobre ❤️</div>
+</div>
+
+<div id="letter">
+<h2>Amorcito Yadi</h2>
+
+<img src="foto1.jpg" class="photo">
+
+<p>Se termina un año más y no quería dejarlo pasar sin escribirte estas palabras. A veces en el día a día damos por sentadas muchas cosas, y yo no quiero dar por sentado nuestra historia.</p>
+
+<video class="video" autoplay loop muted playsinline>
+<source src="video1.mp4">
+</video>
+
+<p>Hace casi tres años que caminamos juntos, con momentos hermosos, con otros no tanto, pero siempre aprendiendo. Aprendí de vos, de tu forma de ver la vida, de tu fuerza, de tu sensibilidad y también de tus silencios. Aprendí a amar de una manera más real, más consciente.</p>
+
+<img src="foto2.jpg" class="photo">
+
+<video class="video" autoplay loop muted playsinline>
+<source src="video2.mp4">
+</video>
+
+<p>Este año nos puso a prueba, como la vida misma. Hubo risas, planes, enojos, charlas largas y también momentos de distancia, pero aun así acá estamos. Y para mí eso vale mucho. Porque elegirnos no siempre es fácil, pero es una decisión que sigo tomando. Crecimos, cambiamos y aun así seguimos eligiéndonos.</p>
+
+<img src="foto3.jpg" class="photo">
+
+<video class="video" autoplay loop muted playsinline>
+<source src="video3.mp4">
+</video>
+
+<p>Quiero agradecerte por lo que sos, por lo que das, y también por lo que intentas incluso cuando no es sencillo. No somos perfectos, pero lo nuestro es verdadero, y eso hoy lo valoro más que nunca.</p>
+
+<video class="video" autoplay loop muted playsinline>
+<source src="video4.mp4">
+</video>
+
+<p>Ojalá el año que viene nos encuentre creciendo, escuchándonos más, cuidándonos mejor y celebrando lo que somos. Yo deseo seguir caminando a tu lado, con errores, con aprendizajes y con amor.</p>
+
+<p>Gracias por este año y por cada uno que compartimos.<br>
+Feliz fin de año, amorcito.</p>
+
+<div class="signature">
+Te amo de la segunda estrella hacia el amanecer<br>
+Luna de mi vida ✨<br>
+Emiliano Ayala
+</div>
+
+</div>
+</div>
+
+<audio id="music" loop>
+<source src="musica.mp3">
+</audio>
+
+<script>
+function openLetter(){
+  document.getElementById("container").classList.add("open");
+  const m=document.getElementById("music");
+  m.volume=.25;
+  m.play();
+}
+
+const icons=["✨","⭐","🌙","💛"];
+setInterval(()=>{
+  const s=document.createElement("div");
+  s.className="spark";
+  s.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+  s.style.left=Math.random()*100+"vw";
+  s.style.fontSize=14+Math.random()*14+"px";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),16000);
+},700);
+</script>
+
+</body>
+</html>
